@@ -12,6 +12,8 @@ import za.ac.nwu.ac.logic.config.LogicConfig;
 @ComponentScan(basePackages = {
         "za.ac.nwu.ac.web.sb.controller",
         "za.ac.nwu.ac.web.sb.exception" })
-public class WebConfig {
+public class WebConfig
+{
+
 
 }
