@@ -7,8 +7,6 @@ public class Discovery_AdministratorDto
     private Long Administrator_EmployeeNumber;
     private String Administrator_Name;
     private String Administrator_Surname;
-
-
     public Discovery_AdministratorDto(Long Administrator_EmployeeNumber, String Administrator_Name, String Administrator_Surname)
     {
         this.Administrator_EmployeeNumber=Administrator_EmployeeNumber;

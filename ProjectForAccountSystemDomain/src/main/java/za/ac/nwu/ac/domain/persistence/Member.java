@@ -18,6 +18,7 @@ public class Member implements Serializable
     private LocalDate Member_JoinDate;
     public Member()
     {
+
     }
 
     public Member(Long Member_ID, String Member_Name, String Member_Surname, Double Member_RewardsNumber, Double Member_Miles, Integer Member_Current_Plays, LocalDate Member_JoinDate)
@@ -31,7 +32,6 @@ public class Member implements Serializable
         this.Member_JoinDate=Member_JoinDate;
 
     }
-
     @Id
     @SequenceGenerator(name = "Member",sequenceName ="Member" ,allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "Member")

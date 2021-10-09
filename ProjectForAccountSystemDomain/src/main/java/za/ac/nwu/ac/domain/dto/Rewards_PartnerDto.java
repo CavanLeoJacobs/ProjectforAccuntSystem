@@ -8,7 +8,7 @@ import java.time.LocalDate;
 @ApiModel(value="Rewards_Partner",description="A DTO that represents the Rewards_Partner")
 public class Rewards_PartnerDto
 {
-    private Long Partner_CodeNumber; //Varchar(12) not null unique;
+    private Long Partner_CodeNumber;
     private String Partner_Name;
     private Double Transaction_Amount;
     private Double Number_of_Miles_Used;
@@ -22,8 +22,13 @@ public class Rewards_PartnerDto
         this.Number_of_Miles_Used=Number_of_Miles_Used;
         this.Transaction_Date=Transaction_Date;
     }
-    public Rewards_PartnerDto(Rewards_Partner Rewards_Partner)
+    public Rewards_PartnerDto(Rewards_Partner rewards_partner)
     {
+        this.setPartner_CodeNumber(rewards_partner.getPartner_CodeNumber());
+        this.setPartner_Name(rewards_partner.getPartner_Name());
+        this.setTransaction_Amount(rewards_partner.getTransaction_Amount());
+        this.setNumber_of_Miles_Used(rewards_partner.getNumber_of_Miles_Used());
+        this.setTransaction_Date(rewards_partner.getTransaction_Date());
 
     }
 

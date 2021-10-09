@@ -1,4 +1,4 @@
 package za.ac.nwu.ac.logic.flow;
 
-public interface FetchMemberFlow {
+public interface MemberFlow {
 }

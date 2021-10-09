@@ -3,22 +3,22 @@ package za.ac.nwu.ac.domain.exception;
 
 //import za.ac.nwu.ac.domain.dto.MemberDto;
 
+import za.ac.nwu.ac.domain.dto.Discovery_AdministratorDto;
 import za.ac.nwu.ac.domain.dto.MemberDto;
+import za.ac.nwu.ac.domain.persistence.Discovery_Administrator;
 import za.ac.nwu.ac.domain.persistence.Member;
+import za.ac.nwu.ac.domain.service.GeneralResponse;
 
 import java.io.Serializable;
 
 public class ExceptionForDomainClasses //implements Serializable
 {
-  //  private static final long serialVersionUID = 7135135098889303298L;
-    MemberDto CorrectDomain = new MemberDto();
-    Member Correctper = new Member();
-
+   // GeneralResponse response =new GeneralResponse();
        public void ExceptionHandler()
        {
                try
                {
-                   //CorrectDomain.MemberDto(Correctper);
+                 //  response.hashCode();
 
                }  catch (Exception error)
                {

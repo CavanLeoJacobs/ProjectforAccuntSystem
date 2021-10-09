@@ -53,7 +53,6 @@ public class MemberDto
     public void setMember_ID(Long member_ID) {
         Member_ID = member_ID;
     }
-
     public String getMember_Name() {
         return Member_Name;
     }

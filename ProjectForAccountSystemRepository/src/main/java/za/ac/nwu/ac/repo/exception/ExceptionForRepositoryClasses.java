@@ -15,9 +15,8 @@ public class ExceptionForRepositoryClasses {
             repositoryConfig.buildJpaProperties();
             repositoryConfig.entityManagerFactory();
 
-
-        } catch (Exception error) {
-
+        }
+        catch (Exception error) {
 
             System.out.println(error.getMessage()+"\n");
             System.out.println("Failed to pass this test");
