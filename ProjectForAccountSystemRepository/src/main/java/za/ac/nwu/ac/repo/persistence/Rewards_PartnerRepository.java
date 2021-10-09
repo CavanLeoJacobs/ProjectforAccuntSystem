@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import za.ac.nwu.ac.domain.persistence.Rewards_Partner;
 
 @Repository
-public interface Rewards_PartnerRepository extends JpaRepository<Rewards_Partner,Long>
+public interface Rewards_PartnerRepository extends JpaRepository<Rewards_Partner,Integer>
 {
     @Query(value = "SELECT"
             +"*"

@@ -1,7 +1,7 @@
 package za.ac.nwu.ac.domain.dto;
 
 import io.swagger.annotations.ApiModel;
-import za.ac.nwu.ac.domain.exception.ExceptionForDomainClasses;
+
 import za.ac.nwu.ac.domain.persistence.Member;
 
 import java.time.LocalDate;
@@ -10,7 +10,7 @@ import java.time.LocalDate;
 public class MemberDto
 {
 
-    private Long Member_ID;
+    private Integer Member_ID;
     private String Member_Name;
     private String Member_Surname;
     private Double Member_RewardsNumber;
@@ -22,7 +22,7 @@ public class MemberDto
     {
 
     }
-    public MemberDto(Long Member_ID, String Member_Name, String Member_Surname, Double Member_RewardsNumber, Double Member_Miles, Integer Member_Current_Plays, LocalDate Member_JoinDate)
+    public MemberDto(Integer Member_ID, String Member_Name, String Member_Surname, Double Member_RewardsNumber, Double Member_Miles, Integer Member_Current_Plays, LocalDate Member_JoinDate)
     {
         this.Member_ID=Member_ID;
         this.Member_Name=Member_Name;
@@ -46,11 +46,11 @@ public class MemberDto
     }
 
 
-    public Long getMember_ID() {
+    public Integer getMember_ID() {
         return Member_ID;
     }
 
-    public void setMember_ID(Long member_ID) {
+    public void setMember_ID(Integer member_ID) {
         Member_ID = member_ID;
     }
     public String getMember_Name() {

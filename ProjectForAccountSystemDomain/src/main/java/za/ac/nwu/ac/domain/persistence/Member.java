@@ -3,25 +3,28 @@ package za.ac.nwu.ac.domain.persistence;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Set;
 
 public class Member implements Serializable
 {
 
     private static final long serialVersionUID = 5604864958111056329L;
 
-    private Long Member_ID;
+    private Integer  Member_ID;
     private String Member_Name;
     private String Member_Surname;
     private Double Member_RewardsNumber;
     private Double Member_Miles;
     private Integer Member_Current_Plays;
     private LocalDate Member_JoinDate;
+    private Set<Rewards_Partner> rewards_partners;
+
     public Member()
     {
 
     }
 
-    public Member(Long Member_ID, String Member_Name, String Member_Surname, Double Member_RewardsNumber, Double Member_Miles, Integer Member_Current_Plays, LocalDate Member_JoinDate)
+    public Member(Integer Member_ID, String Member_Name, String Member_Surname, Double Member_RewardsNumber, Double Member_Miles, Integer Member_Current_Plays, LocalDate Member_JoinDate)
     {
         this.Member_ID=Member_ID;
         this.Member_Name=Member_Name;
@@ -36,7 +39,7 @@ public class Member implements Serializable
     @SequenceGenerator(name = "Member",sequenceName ="Member" ,allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "Member")
     @Column(name = "Member_ID")
-    public Long getMember_ID()
+    public Integer getMember_ID()
     {
         return Member_ID;
     }

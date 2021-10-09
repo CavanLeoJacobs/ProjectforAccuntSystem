@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import za.ac.nwu.ac.domain.persistence.Discovery_Administrator;
 
 @Repository
-public interface Discovery_AdministratorRepository extends JpaRepository<Discovery_Administrator,Long>
+public interface Discovery_AdministratorRepository extends JpaRepository<Discovery_Administrator,Integer>
 {
     @Query(value = "SELECT"
             +"*"

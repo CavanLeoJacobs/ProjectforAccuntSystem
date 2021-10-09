@@ -1,4 +1,13 @@
 package za.ac.nwu.ac.logic.flow;
 
-public interface MemberFlow {
+import za.ac.nwu.ac.domain.dto.MemberDto;
+
+import java.util.List;
+
+public interface MemberFlow
+{
+    List<MemberDto> getAllMember();
+
+
 }
+

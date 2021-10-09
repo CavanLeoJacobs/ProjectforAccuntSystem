@@ -12,8 +12,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 //import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 //import org.springframework.orm.jpa.JpaTransactionManager;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
+//import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
+//import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 //import org.springframework.transaction.PlatformTransactionManager;
@@ -40,23 +40,70 @@ public class RepositoryConfig {
     final LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
     entityManagerFactoryBean.setDataSource(dataSource());
     entityManagerFactoryBean.setPackagesToScan(ENTITY_PACKAGES_TO_SCAN);
-    entityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
     entityManagerFactoryBean.setJpaProperties(buildJpaProperties());
     entityManagerFactoryBean.setPersistenceUnitName(PERSISTENCE_UNIT_NAME);
+      entityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
     return entityManagerFactoryBean;
   }
 
-  @Bean
-  public DataSource dataSource() {
-    EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
-    return builder.setType(EmbeddedDatabaseType.HSQL)
-          //  .addScript("script/schema.sql")
-            //.addScript("script/data.sql")
-            .build();
-  }
-  /*
+
+
+
   @Value("${spring.datasource.url}")
   private String datasourceUrl;
+  @Value("${spring.datasource.username}")
+  private String system;
+  @Value("${spring.datasource.password}")
+  private String password;
+
+
+  @Value("${spring.datasource.driver-class-name}")
+  //private String name;
+  //@Value("{spring.datasource.ConnectionProperties}")
+  //private String ConnectionProperties;
+  @Bean
+  public DataSource dataSource() {
+    DriverManagerDataSource dataSource = new DriverManagerDataSource();
+    //dataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+    //spring.datasource.driver-class-name=oracle.jdbc.driver.OracleDriver
+
+    dataSource.setUrl(datasourceUrl);
+    dataSource.setUsername(system);
+    dataSource.setPassword(password);
+    // dataSource.setDriverClassName(name);
+    //dataSource.setConnectionProperties(ConnectionProperties);
+
+    // dataSource.setImplicitCachingEnabled(true);
+    // dataSource.setFastConnectionFailoverEnabled(true);
+
+    return dataSource;
+  }
+    @Bean
+    public Properties buildJpaProperties () {
+    Properties properties = new Properties();
+    properties.setProperty("javax.persistence.transactionType", "jta");
+    properties.setProperty("hibernate.IntegerCode.use_reflection_optimizer", "true");
+    properties.setProperty("hibernate.transaction.factory_class", "org.hibernate.transaction.JTATransactionFactory");
+    properties.setProperty("hibernate.query.factory_class", "org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory");
+    properties.setProperty("hibernate.transaction.jta.platform", "org.hibernate.service.jta.platform.Internal.sunOneJtaPlatform");
+
+    //properties.setProperty("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
+    //mine is different
+    properties.setProperty("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
+    properties.setProperty("hibernate.generate_statistics", "false");
+    properties.setProperty("hibernate.use_sql_comments", "false");
+    properties.setProperty("hibernate.show_sql", "true");
+    properties.setProperty("hibernate.format_sql", "true");
+    properties.setProperty("hibernate.jdbc.batch_size", "500");
+    properties.setProperty("hibernate.order_inserts", "true");
+    properties.setProperty("hibernate.order_updates", "true");
+    properties.setProperty("hibernate.batch_versioned_data", "true");
+    properties.setProperty("hibernate.connection.driver.class", "org.hsqldb.jdbcDriver");
+    properties.setProperty("hibernate.hibernate.", "update");
+    return properties;
+  }
+
+  /*
   @Value("${spring.datasource.username}")
   private String system;
   @Value("${spring.datasource.password}")
@@ -72,7 +119,13 @@ public class RepositoryConfig {
 
   //@Value("${spring.jpa.properties.hibernate.format_sql}")
   //private String format;
-
+ @Bean
+  public DataSource dataSource() {
+    EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
+    return builder.setType(EmbeddedDatabaseType.HSQL)
+          //  .addScript("script/schema.sql")
+            //.addScript("script/data.sql")
+            .build();
 /*
   @Bean
   public DataSource dataSource()
@@ -99,31 +152,7 @@ public class RepositoryConfig {
   }
 
 */
-  @Bean
-  public Properties buildJpaProperties() {
-    Properties properties = new Properties();
-    properties.setProperty("javax.persistence.transactionType", "jta");
-    properties.setProperty("hibernate.IntegerCode.use_reflection_optimizer", "true");
-    properties.setProperty("hibernate.transaction.factory_class", "org.hibernate.transaction.JTATransactionFactory");
-    properties.setProperty("hibernate.query.factory_class", "org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory");
-    properties.setProperty("hibernate.transaction.jta.platform", "org.hibernate.service.jta.platform.Internal.sunOneJtaPlatform");
-
-    //properties.setProperty("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
-    //mine is different
-    properties.setProperty("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
-    properties.setProperty("hibernate.generate_statistics", "false");
-    properties.setProperty("hibernate.use_sql_comments", "false");
-    properties.setProperty("hibernate.show_sql", "true");
-    properties.setProperty("hibernate.format_sql", "true");
-    properties.setProperty("hibernate.jdbc.batch_size", "500");
-    properties.setProperty("hibernate.order_inserts", "true");
-    properties.setProperty("hibernate.order_updates", "true");
-    properties.setProperty("hibernate.batch_versioned_data", "true");
-    properties.setProperty("hibernate.connection.driver.class", "org.hsqldb.jdbcDriver");
-    properties.setProperty("hibernate.hibernate.", "update");
-    return properties;
-  }
 
 
+    }
 
-}

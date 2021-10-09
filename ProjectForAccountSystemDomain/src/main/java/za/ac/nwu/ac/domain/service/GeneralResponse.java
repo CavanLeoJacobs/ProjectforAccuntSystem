@@ -7,8 +7,10 @@ import java.util.Objects;
     {
 
         private static final long serialVersionUID = -2109552313657529496L;
-      /*
-        private final boolean successful;
+
+
+
+         private final boolean successful;
         private final transient T payload;
         public GeneralResponse()
         {
@@ -44,7 +46,7 @@ import java.util.Objects;
 
         }
 
-       */
+
 
     }
 

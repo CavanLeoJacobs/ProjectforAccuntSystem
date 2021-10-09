@@ -11,9 +11,9 @@ public class ExceptionForRepositoryClasses {
 
         try
         {
-            repositoryConfig.dataSource();
-            repositoryConfig.buildJpaProperties();
-            repositoryConfig.entityManagerFactory();
+         //   repositoryConfig.dataSource();
+           //repositoryConfig.buildJpaProperties();
+           repositoryConfig.entityManagerFactory();
 
         }
         catch (Exception error) {
