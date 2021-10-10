@@ -10,7 +10,7 @@ public class Member implements Serializable
 
     private static final long serialVersionUID = 5604864958111056329L;
 
-    private Integer  Member_ID;
+    private Integer Member_ID;
     private String Member_Name;
     private String Member_Surname;
     private Double Member_RewardsNumber;

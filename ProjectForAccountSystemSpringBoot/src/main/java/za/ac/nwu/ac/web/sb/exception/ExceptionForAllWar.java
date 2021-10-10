@@ -3,19 +3,19 @@ package za.ac.nwu.ac.web.sb.exception;
 
 
 import za.ac.nwu.ac.web.sb.config.SwaggerConfiguration;
+import za.ac.nwu.ac.web.sb.config.WebConfig;
 
 public class ExceptionForAllWar {
 
 
     public void ExceptionHandlerWar()
     {
-       // SwaggerConfiguration swaggerConfiguration=new SwaggerConfiguration();
-
-
+        WebConfig classes = new WebConfig();
         try
         {
+            classes.ShowAllWebConfig();
 
-           // swaggerConfiguration.api();
+
 
         }  catch (Exception error) {
 

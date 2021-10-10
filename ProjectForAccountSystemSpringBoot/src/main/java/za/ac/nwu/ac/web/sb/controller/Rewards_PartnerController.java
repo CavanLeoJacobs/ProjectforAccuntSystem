@@ -23,7 +23,7 @@ import java.util.List;
 @RequestMapping("Rewards_PartnerController")
 public class Rewards_PartnerController
 {
-
+    Rewards_PartnerDto part =new Rewards_PartnerDto();
     @GetMapping("/all")
     @ApiOperation(value = "Gets all the configured Account types.", notes = "Returns a list of account types")
     @ApiResponses(value = {
@@ -34,12 +34,12 @@ public class Rewards_PartnerController
     })
     public ResponseEntity<GeneralResponse<List<Rewards_PartnerDto>>> getAll() {
         List<Rewards_PartnerDto> rewards_Partner = rewards_PartnerFlow.getAllRewards_Partner();
-        GeneralResponse<List<Rewards_PartnerDto>> response = new GeneralResponse<List<Rewards_PartnerDto>>(true, rewards_Partner);
+        GeneralResponse<List<Rewards_PartnerDto>> response = new GeneralResponse<List<Rewards_PartnerDto>>("ss");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     public GeneralResponse<String> GetAll() {
-        return new GeneralResponse<String>(true, "No Types Found");
+        return new GeneralResponse<String>("ss");
     }
 
     @Autowired

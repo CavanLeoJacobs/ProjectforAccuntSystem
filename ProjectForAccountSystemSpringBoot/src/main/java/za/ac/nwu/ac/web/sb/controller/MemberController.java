@@ -29,12 +29,12 @@ public class MemberController
     })
     public ResponseEntity<GeneralResponse<List<MemberDto>>> getAll() {
         List<MemberDto> member = memberFlow.getAllMember();
-        GeneralResponse<List<MemberDto>> response = new GeneralResponse<List<MemberDto>>(true, member);
+        GeneralResponse<List<MemberDto>> response = new GeneralResponse<List<MemberDto>>("swfwefwew");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     public GeneralResponse<String> GetAll() {
-        return new GeneralResponse<String>(true, "No Types Found");
+        return new GeneralResponse<String>("sfffffff");
     }
     @Autowired
     public MemberController(MemberFlow memberFlow) {

@@ -18,6 +18,6 @@ public class MemberFlowImpl implements MemberFlow
 
     @Override
     public List<MemberDto> getAllMember() {
-        return memberTranslator.getAllMember();
+        return getAllMember();
     }
 }

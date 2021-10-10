@@ -1,9 +1,13 @@
 package za.ac.nwu.ac.domain.dto;
 
 import io.swagger.annotations.ApiModel;
+
+import java.io.Serializable;
+
 @ApiModel(value="Discovery_Administrator",description="A DTO that represents the Discovery_Administrator")
-public class Discovery_AdministratorDto
+public class Discovery_AdministratorDto implements Serializable
 {
+    private static final long serialVersionUID = 7033264589806488367L;
     private Integer Administrator_EmployeeNumber;
     private String Administrator_Name;
     private String Administrator_Surname;

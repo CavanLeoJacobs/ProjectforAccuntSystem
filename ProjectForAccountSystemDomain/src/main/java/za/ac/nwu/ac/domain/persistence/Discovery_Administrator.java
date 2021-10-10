@@ -8,7 +8,7 @@ public class Discovery_Administrator implements Serializable
 {
     private static final long serialVersionUID = 6543207124269325991L;
 
-    private Integer  Administrator_EmployeeNumber;
+    private Integer Administrator_EmployeeNumber;
     private String Administrator_Name;
     private String Administrator_Surname;
     private Set<Member> members;

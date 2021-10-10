@@ -29,15 +29,22 @@ public class Discovery_AdministratorController {
             @ApiResponse(code = 404, message = "Not found", response = GeneralResponse.class),
             @ApiResponse(code = 500, message = "Internal Server Error", response = GeneralResponse.class),
     })
-    public ResponseEntity<GeneralResponse<List<Discovery_AdministratorDto>>>getAll() {
+
+    public ResponseEntity<GeneralResponse<List<Discovery_AdministratorDto>>>getAll()
+    {
         List<Discovery_AdministratorDto> discovery_Administrator = discovery_AdministratorFlow.getAllDiscovery_Administrator();
-        GeneralResponse<List<Discovery_AdministratorDto>> response = new GeneralResponse<List<Discovery_AdministratorDto>>(true, discovery_Administrator);
+        GeneralResponse<List<Discovery_AdministratorDto>> response = new GeneralResponse<List<Discovery_AdministratorDto>>("No Types Found");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     public GeneralResponse<String> GetAll() {
-        return new GeneralResponse<String>(true, "No Types Found");
+        return new GeneralResponse<String>("No Types Found");
     }
+
+
+
+
+
 
 
 
@@ -45,6 +52,5 @@ public class Discovery_AdministratorController {
     public Discovery_AdministratorController(Discovery_AdministratorFlow discovery_AdministratorFlow) {
         this.discovery_AdministratorFlow = discovery_AdministratorFlow;
     }
-
     private final Discovery_AdministratorFlow discovery_AdministratorFlow;
 }

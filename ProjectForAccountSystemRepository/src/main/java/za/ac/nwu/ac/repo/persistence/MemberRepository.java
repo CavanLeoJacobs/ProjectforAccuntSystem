@@ -7,6 +7,7 @@ import za.ac.nwu.ac.domain.persistence.Member;
 @Repository
 public interface MemberRepository extends JpaRepository<Member,Integer>
 {
+
     @Query(value = "SELECT"
             +"*"
             +"FROM"
@@ -19,4 +20,5 @@ public interface MemberRepository extends JpaRepository<Member,Integer>
     Member getMember_Miles();
     Member getMember_Current_Plays();
     Member getMember_JoinDate();
+
 }

@@ -10,6 +10,8 @@ import za.ac.nwu.ac.translator.config.TranslatorConfig;
 @ComponentScan(basePackages = {
         "za.ac.nwu.ac.logic.flow"
 })
-public class LogicConfig {
+public class LogicConfig
+{
+
 
 }

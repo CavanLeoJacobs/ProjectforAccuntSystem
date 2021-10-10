@@ -30,6 +30,7 @@ public class SwaggerConfiguration
         @Value("${swagger.application.description}")
         private String applicationDescription;
 
+
         @Bean
         public Docket api()
         {
@@ -55,4 +56,14 @@ public class SwaggerConfiguration
                     "",
                     Collections.emptyList());
         }
+
+        @Override
+        public String toString() {
+                return "SwaggerConfiguration{" +
+                        "applicationVersion='" + applicationVersion + '\'' +
+                        ", applicationName='" + applicationName + '\'' +
+                        ", applicationDescription='" + applicationDescription + '\'' +
+                        '}';
+        }
+
 }

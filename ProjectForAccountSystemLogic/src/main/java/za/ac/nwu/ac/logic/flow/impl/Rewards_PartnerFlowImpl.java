@@ -7,14 +7,16 @@ import java.util.List;
 
 public class Rewards_PartnerFlowImpl implements Rewards_PartnerFlow
 {
-    public final Rewards_PartnerTranslator rewards_PartnerTranslator;
 
+
+
+    public final Rewards_PartnerTranslator rewards_PartnerTranslator;
     public Rewards_PartnerFlowImpl(Rewards_PartnerTranslator rewards_partnerTranslator) {
         rewards_PartnerTranslator = rewards_partnerTranslator;
     }
 
     @Override
     public List<Rewards_PartnerDto> getAllRewards_Partner() {
-        return rewards_PartnerTranslator.getAllRewards_Partner();
+        return getAllRewards_Partner();
     }
 }
