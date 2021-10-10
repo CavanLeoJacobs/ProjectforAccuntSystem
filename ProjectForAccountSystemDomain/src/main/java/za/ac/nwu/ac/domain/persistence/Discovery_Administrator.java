@@ -14,15 +14,15 @@ public class Discovery_Administrator implements Serializable
     private Set<Member> members;
     private Set<Rewards_Partner> rewards_partners;
 
-    public Discovery_Administrator()
-    {
-
+    public Discovery_Administrator() {
     }
+
     public Discovery_Administrator(Integer Administrator_EmployeeNumber, String Administrator_Name, String Administrator_Surname)
     {
         this.Administrator_EmployeeNumber=Administrator_EmployeeNumber;
         this.Administrator_Name=Administrator_Name;
         this.Administrator_Surname=Administrator_Surname;
+
     }
     @Id
     @SequenceGenerator(name = "Discovery_Administrator",sequenceName ="Discovery_Administrator" ,allocationSize = 1)

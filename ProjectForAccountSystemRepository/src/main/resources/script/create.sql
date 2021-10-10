@@ -1,12 +1,12 @@
---CREATE SEQUENCE VitalMe
- --MINVALUE 1
- --MAXVALUE 9999999999999999999999999999
- --INCREMENT BY 1
- --START WITH 1;
+CREATE SEQUENCE VitalMe
+ MINVALUE 1
+ MAXVALUE 9999999999999999999999999999
+ INCREMENT BY 1
+ START WITH 1;
 
-create table Member
+CREATE TABLE Member
 (
-Member_ID char(13) not null unique,
+Member_ID Int not null ,
 Member_Name varchar(30),
 Member_Surname varchar(30),
 Member_RewardsNumber number(8),
@@ -17,14 +17,14 @@ constraint pk_Member primary key (Member_ID));
 
 create table Discovery_Administrator
 (
-Administrator_EmployeeNumber char(9) not null unique,
+Administrator_EmployeeNumber int ,
 Administrator_Name varchar(30),
 Administrator_Surname varchar(30),
 constraint pk_Discovery_Administrator primary key (Administrator_EmployeeNumber));
 
 create table Rewards_Partner
 (
-Partner_CodeNumber Varchar(12) not null unique,
+Partner_CodeNumber Int not null ,
 Partner_Name varchar(30),
 Transaction_Amount number(8,2),
 Number_of_Miles_Used number(8,2),

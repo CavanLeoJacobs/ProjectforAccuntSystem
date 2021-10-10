@@ -11,6 +11,8 @@ public class Discovery_AdministratorDto implements Serializable
     private Integer Administrator_EmployeeNumber;
     private String Administrator_Name;
     private String Administrator_Surname;
+
+
     public Discovery_AdministratorDto()
     {
 

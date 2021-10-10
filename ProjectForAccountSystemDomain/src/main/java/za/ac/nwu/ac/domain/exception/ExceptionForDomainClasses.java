@@ -1,6 +1,7 @@
 package za.ac.nwu.ac.domain.exception;
 
 
+import za.ac.nwu.ac.domain.persistence.Discovery_Administrator;
 
 public class ExceptionForDomainClasses //implements Serializable
 {

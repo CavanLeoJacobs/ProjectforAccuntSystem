@@ -58,7 +58,5 @@ class MemberDtoTest {
     void getMember_JoinDate() {
     }
 
-    @Test
-    void setMember_JoinDate() {
-    }
+
 }
