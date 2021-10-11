@@ -13,10 +13,10 @@ public class ExceptionForRepositoryClasses {
         {
             repositoryConfig.dataSource();
             repositoryConfig.buildJpaProperties();
-            repositoryConfig.transactionManager();
-            repositoryConfig.getJdbcTemplate();
-            repositoryConfig.exceptionTranslation();
-            repositoryConfig.entityManagerFactory();
+           // repositoryConfig.transactionManager();
+           // repositoryConfig.getJdbcTemplate();
+           // repositoryConfig.exceptionTranslation();
+           // repositoryConfig.entityManagerFactory();
 
         }
         catch (Exception error) {
