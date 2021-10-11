@@ -1,4 +1,3 @@
-
 create table Member
 (
 Member_ID char(13) not null unique,

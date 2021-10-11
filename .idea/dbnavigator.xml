@@ -37,14 +37,12 @@
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
     <mapping file-url="file://$PROJECT_DIR$/ProjectForAccountSystemRepository/src/test/resources/script/drop.sql" connection-id="virtual-oracle-connection" session-id="MAIN" current-schema="" />
-    <mapping file-url="file://$PROJECT_DIR$/ProjectForAccountSystemRepository/src/test/resources/script/create.sql" connection-id="virtual-iso92-sql-connection" session-id="MAIN" current-schema="" />
+    <mapping file-url="file://$PROJECT_DIR$/ProjectForAccountSystemRepository/src/test/resources/script/create.sql" connection-id="virtual-oracle-connection" session-id="MAIN" current-schema="" />
     <mapping file-url="file://$PROJECT_DIR$/ProjectForAccountSystemRepository/src/test/resources/script/select.sql" connection-id="virtual-oracle-connection" session-id="MAIN" current-schema="" />
     <mapping file-url="file://$PROJECT_DIR$/ProjectForAccountSystemRepository/src/test/resources/script/insert.sql" connection-id="virtual-oracle-connection" session-id="MAIN" current-schema="" />
-    <mapping file-url="file://$PROJECT_DIR$/ProjectForAccountSystemRepository/src/test/resources/script/alter.sql" connection-id="virtual-oracle-connection" session-id="MAIN" current-schema="" />
     <mapping file-url="file://$PROJECT_DIR$/ProjectForAccountSystemRepository/src/main/resources/script/create.sql" connection-id="virtual-oracle-connection" session-id="MAIN" current-schema="" />
     <mapping file-url="file://$PROJECT_DIR$/ProjectForAccountSystemRepository/src/main/resources/script/select.sql" connection-id="virtual-oracle-connection" session-id="MAIN" current-schema="" />
     <mapping file-url="file://$PROJECT_DIR$/ProjectForAccountSystemRepository/src/main/resources/script/drop.sql" connection-id="virtual-oracle-connection" session-id="MAIN" current-schema="" />
-    <mapping file-url="file://$PROJECT_DIR$/ProjectForAccountSystemRepository/src/main/resources/script/alter.sql" connection-id="virtual-oracle-connection" session-id="MAIN" current-schema="" />
     <mapping file-url="file://$PROJECT_DIR$/ProjectForAccountSystemRepository/src/main/resources/script/insert.sql" connection-id="virtual-oracle-connection" session-id="MAIN" current-schema="" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
